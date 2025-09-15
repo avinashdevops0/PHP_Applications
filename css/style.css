@@ -1,0 +1,187 @@
+:root {
+    --primary: #0d6efd;
+    --secondary: #6c757d;
+    --success: #198754;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #0dcaf0;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --sbv-blue: #1a4f8b;
+    --sbv-light-blue: #4a8cbe;
+    --sbv-orange: #ff7f50;
+}
+/* Add to your CSS file */
+.logo {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #1a4f8b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ff7f50; /* SBV orange */
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--sbv-blue) 0%, var(--sbv-light-blue) 100%);
+    color: white;
+    padding: 80px 0;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features {
+    background-color: white;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--sbv-blue);
+    margin-bottom: 1.5rem;
+}
+
+.feature-item h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Vehicle Cards */
+.vehicle-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.vehicle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.vehicle-card .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--sbv-blue);
+}
+
+.vehicle-features {
+    color: var(--secondary);
+}
+
+/* Booking Cards */
+.booking-card {
+    border-left: 4px solid var(--sbv-blue);
+    border-radius: 8px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--sbv-blue);
+    border-color: var(--sbv-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--sbv-light-blue);
+    border-color: var(--sbv-light-blue);
+}
+
+.btn-outline-primary {
+    color: var(--sbv-blue);
+    border-color: var(--sbv-blue);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--sbv-blue);
+    border-color: var(--sbv-blue);
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-dark {
+    background-color: var(--sbv-blue) !important;
+}
+
+/* Forms */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.form-control:focus {
+    border-color: var(--sbv-light-blue);
+    box-shadow: 0 0 0 0.25rem rgba(26, 79, 139, 0.25);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--sbv-orange) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+}
