@@ -1,0 +1,54 @@
+:root {
+    --apple-gradient: linear-gradient(135deg, #a2c0d4 0%, #6e8ea9 100%);
+    --samsung-gradient: linear-gradient(135deg, #142850 0%, #27496d 100%);
+}
+
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.hero-section {
+    background: var(--apple-gradient) !important;
+    color: white;
+}
+
+.bg-apple {
+    background: var(--apple-gradient);
+}
+
+.bg-samsung {
+    background: var(--samsung-gradient);
+}
+
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-header h5 {
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
