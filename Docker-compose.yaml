@@ -1,0 +1,38 @@
+version: "3"  # Docker Compose file format version
+
+services:
+  app:  # PHP application service
+    build: .  # Build image from Dockerfile in current directory
+    container_name: php_app  # Name of the container
+    ports:
+      - "8080:80"   # Map host port 8080 -> container port 80 (Apache/PHP)
+    depends_on:
+      - db  # Ensure db service starts before app
+    networks:
+      - app-network  # Connect to the custom bridge network
+    deploy:
+      replicas: 2   # Run 2 instances (only works in Docker Swarm, not plain docker-compose)
+
+  db:  # MySQL database service
+    image: mysql:latest  # Use the latest MySQL image
+    container_name: mysql_db  # Name of the MySQL container
+    environment:
+      MYSQL_ROOT_PASSWORD: example   # Root password
+      MYSQL_DATABASE: exampledb      # Database name to create
+      MYSQL_USER: exampleuser        # App database user
+      MYSQL_PASSWORD: examplepass    # Password for app user
+    ports:
+      - "3306:3306"  # Map MySQL port (optional, only if you want external access)
+    volumes:
+      - db_data:/var/lib/mysql  # Persist MySQL data on the host
+    networks:
+      - app-network  # Connect to the same network as app
+
+# Define persistent volumes
+volumes:
+  db_data:  # Volume to store MySQL data
+
+# Define custom network
+networks:
+  app-network:
+    driver: bridge  # Use bridge networking
